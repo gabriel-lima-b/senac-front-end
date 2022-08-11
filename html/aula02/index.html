@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 02 - Próximos passos com HTML</title>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h2>Imagens</h2>
+        <h3>Tag img</h3>
+        <img
+          src="./imagens/caminho.jpg"
+          alt="Caminho entre árvores"
+          title="Caminho"
+        />
+        <picture>
+          <source media="(min-width: 650px)" srcset="./imagens/caminho.jpg" />
+          <source media="(min-width: 465px)" srcset="./imagens/imgMedia.jpg" />
+          <img
+            src="./imagens/imgPequena.jpg"
+            alt="Cozinha"
+            style="width: auto"
+          />
+        </picture>
+      </div>
+      <div>
+        <h2>Formatando Texto com importância</h2>
+        <p>
+          Lorem ipsum dolor
+          <strong> amet consectetur adipisicing </strong> elit. Nam
+          <em> dolores nostrum distinctio </em> iusto fugiat odio
+          <ins> possimus modi </ins> ab exercitationem harum sapiente quasi
+          <del> dignissimos similique magnam </del> ipsa itaque, rerum numquam
+          eum. <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+          inventore ad quis soluta iusto dicta mollitia sed ratione pariatur
+          odio modi sapiente, quibusdam nostrum minima beatae. Suscipit eius
+          pariatur rem! <br />
+          Uma frase com uma letra com sup A<sup>2</sup> e sub B<sub>3</sub>
+        </p>
+      </div>
+
+      <div>
+        <h2>aqui teria um video do youtube, mas a escola bloqueia</h2>
+      </div>
+
+      <div>
+        <h3>Google Maps</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.791776943606!2d-51.2210815842785!3d-30.04283103816326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1660173230274!5m2!1spt-BR!2sbr"
+          width="400"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <footer>
+      <span>Todos os direitos reservados a Gabriel Lima LTDa. &copy;2022</span>
+    </footer>
+  </body>
+</html>
