@@ -5,10 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aula 02 - Próximos passos com HTML</title>
+
+    <style>
+      /* Estilo usando tag HTML */
+      body {
+        background-color: #167ac6;
+        color: #daea6b;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      p {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      h2 {
+        color: maroon;
+        font-family: Sofia;
+      }
+      footer {
+        background-color: gray;
+      }
+
+      /* Estilo sendo aplciado pelo id */
+
+      #texto {
+        width: 40%;
+        color: red;
+        border: solid 2px yellow;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding-left: 2%;
+        padding-right: 2%;
+        text-align: justify;
+        background-color: #fefefe;
+      }
+
+      #galeria {
+        width: 40%;
+        background-color: pink;
+        float: right;
+        overflow: auto;
+      }
+      #galeria h2 {
+        text-align: center;
+      }
+
+      #texto h2 {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <section>
-      <div>
+      <div id="galeria">
         <h2>Imagens</h2>
         <h3>Tag img</h3>
         <img
@@ -26,7 +74,7 @@
           />
         </picture>
       </div>
-      <div>
+      <div id="texto">
         <h2>Formatando Texto com importância</h2>
         <p>
           Lorem ipsum dolor
@@ -44,7 +92,9 @@
       </div>
 
       <div>
-        <h2>aqui teria um video do youtube, mas a escola bloqueia</h2>
+        <h2>
+          Aqui teria um video do youtube, mas a escola bloqueia o acesso ao site
+        </h2>
       </div>
 
       <div>
