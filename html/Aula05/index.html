@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>UC12 - Usando CSS</title>
+		<meta name="description" content="Usando CSS">
+		<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+		<meta name="author" content="Prof. Jair Ferraz">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Google Material Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap" rel="stylesheet">
+		<style type="text/css">
+			body{
+				background-image: url("senac-rs.jpg");
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			h1{
+				text-align: center;
+				text-decoration: underline;
+				font-style: italic;
+				color: green;
+				font-family: Sofia;
+			}
+			h2{
+				font-family: Charm, Brush Script MT;
+			}
+			p{
+				text-align: justify;
+				font-family: Lucida Console;
+				text-indent: 50px;
+				letter-spacing: 3px;
+			}
+			/* Definir as margens da div, sentido horário começando pelo superior */
+			div{
+				margin: 25px 50px 75px 30px;
+			}
+			.conteudo{
+				border: 10px dotted orange;
+				padding-left: 50px;
+				background-color: rgb(255,99,71,0.7)
+			}
+			.rodape p{
+				background-color: gray;
+				font-family: Cursive;
+			}
+			.destaque{
+				text-transform: capitalize;
+				color: aqua;
+				text-decoration: overline;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="conteudo">
+			<h1>
+				<span class="material-icons-outlined">
+					home
+				</span>
+				 Usando CSS
+			</h1>
+			<p>
+				As experiências acumuladas demonstram que a consulta aos diversos militantes talvez venha a ressaltar a relatividade das condições financeiras e administrativas exigidas. No entanto, não podemos esquecer que a complexidade dos estudos efetuados desafia a capacidade de equalização do orçamento setorial. Todavia, o desenvolvimento contínuo de distintas formas de atuação não pode mais se dissociar das direções preferenciais no sentido do progresso.
+			</p>
+			<h1>Usando Formatos</h1>
+			<h2>Conhecendo Estilo</h2>
+			<p class="destaque">Destaque de texto!</p>
+			<h3>Titulo de Destaque</h3>
+		</div>
+		<div class="rodape">
+			<h3>Rodapé</h3>
+			<p>&copy; Desenvolvido por Jair Ferraz.</p>
+		</div>
+	</body>
+</html>
