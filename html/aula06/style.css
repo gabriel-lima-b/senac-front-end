@@ -1,0 +1,72 @@
+/* Comentário no CSS */
+
+body{
+    background-color: lightgray;
+}
+
+
+
+header{
+    background-color: lightblue;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    height: 100px;
+    text-align: center;
+}
+
+.home-title{
+    padding: 30px;
+}
+
+nav{
+    background-color: grey;
+    border: 3px double lightblue;
+    color: lightblue;
+    text-align: center;
+    font-family: Arial Black;
+}
+
+.item-lista-header{
+    display: inline;
+    list-style-type: none;
+    margin-right: 2rem;
+}
+
+.item-lista-header a{
+    text-decoration: none;
+    color: wheat;
+}
+
+.main{
+    height: auto;
+    margin: auto;
+}
+
+.artigo{
+    margin: 10px 30px 0px 50px;
+    padding-top: 10px;
+    text-align: justify;
+    text-indent: 2rem;
+}
+/* 
+.imagens{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+
+.figura{
+    margin-left: 320px;
+}
+
+.sepia{
+    width: 50%;
+    height: 50%;
+    display: block;
+    border-radius: 30%;
+    border: 3px solid black;
+    filter: sepia(80%);
+    -webkit-box-reflect: left;
+    margin-left: auto;
+}

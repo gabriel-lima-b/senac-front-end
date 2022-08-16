@@ -5,21 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Gabriel Lima" />
+    <link rel="stylesheet" href="style.css" />
     <title>UC12 - Imagens</title>
   </head>
   <body>
     <header>
-      <h1>Aula 06</h1>
+      <h1 class="home-title">Aula 06</h1>
     </header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Produtos</a></li>
-        <li><a href="#">Contato</a></li>
+      <ul class="lista-header">
+        <li class="item-lista-header"><a href="index.html">Home</a></li>
+        <li class="item-lista-header"><a href="#">Produtos</a></li>
+        <li class="item-lista-header"><a href="#">Contato</a></li>
       </ul>
     </nav>
-    <section>
-      <article>
+
+    <section class="main">
+      <article class="artigo">
         <h1>Texto Aleatório</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam illum
@@ -37,30 +39,33 @@
           voluptatibus.
         </p>
       </article>
-      <figure>
-        <img
-          src="../assets/imagens/caminho.jpg"
-          alt="caminho entre árvores"
-          title="Caminho em Sepia e espelhado"
-        />
-        <figcaption>Caminho em Sepia e espelhado</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="../assets/imagens/caminho.jpg"
-          alt="caminho entre árvores"
-          title="Caminho desfocado"
-        />
-        <figcaption>Caminho desfocado</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="../assets/imagens/caminho.jpg"
-          alt="caminho entre árvores"
-          title="Caminho com sombra"
-        />
-        <figcaption>Caminho com sombra</figcaption>
-      </figure>
+      <div class="imagens">
+        <figure class="figura">
+          <img
+            class="sepia"
+            src="../assets/imagens/caminho.jpg"
+            alt="caminho entre árvores"
+            title="Caminho em Sepia e espelhado"
+          />
+          <figcaption>Caminho em Sepia e espelhado</figcaption>
+        </figure>
+        <figure class="figura">
+          <img
+            src="../assets/imagens/caminho.jpg"
+            alt="caminho entre árvores"
+            title="Caminho desfocado"
+          />
+          <figcaption>Caminho desfocado</figcaption>
+        </figure>
+        <figure class="figura">
+          <img
+            src="../assets/imagens/caminho.jpg"
+            alt="caminho entre árvores"
+            title="Caminho com sombra"
+          />
+          <figcaption>Caminho com sombra</figcaption>
+        </figure>
+      </div>
     </section>
     <footer>
       <p>
