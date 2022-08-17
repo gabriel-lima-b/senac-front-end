@@ -1,0 +1,44 @@
+body {
+  background-color: 	#8c1eff;
+}
+
+div{
+  float: left;
+  padding: 15px;
+}
+
+.exemplo{
+  background-color: #ffd319;
+  height: 20rem;
+  margin: auto;
+}
+
+.div1{
+  background-color: #ff901f;
+}
+
+.div2{
+  background-color: #ff2975;
+}
+
+.div3{
+  background-color: #f222ff;
+}
+
+.texto{
+  background-color: #ff2975;
+  border: 3px solid aqua;
+  height: 20rem;
+  width: 800px;
+  text-align: justify;
+  text-indent: 2rem;
+}
+
+img{
+  width:170px;
+  height: auto;
+  float: right;
+  margin-left: 15px;
+  background-color: #8c1eff;
+  padding: 10px;
+}
