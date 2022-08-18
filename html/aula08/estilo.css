@@ -70,12 +70,14 @@ section {
   height: 500px;
   float: right;
   background-color: aqua;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 .texto {
   float: left;
   width: 50%;
+  height: 100%;
+  overflow: auto;
 }
 
 .texto h1 {
