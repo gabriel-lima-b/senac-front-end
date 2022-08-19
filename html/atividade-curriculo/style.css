@@ -1,0 +1,32 @@
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.infos {
+  align-self: baseline;
+  justify-items: left;
+  text-align: left;
+}
+
+.nome {
+  font-size: 1.7rem;
+}
+.lista-infos {
+  list-style: none;
+}
+
+.foto {
+  margin: auto;
+  display: flex;
+  height: 100%;
+  flex-direction: row-reverse;
+}
+
+.foto-img {
+  width: 25%;
+  height: 100%;
+  border: 1px solid black;
+  padding: 0.25rem;
+}
