@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  background-image: linear-gradient(white, #333);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+
+nav {
+  background-color: #333;
+  width: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul {
+  padding-left: 0px;
+}
+
+.menu ul li {
+  list-style-type: none;
+  display: inline;
+  float: left;
+}
+
+.menu a {
+  padding: 15px;
+  display: block; /* adiciona bloco na tag a darkgray */
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: rgb(207, 66, 66);
+  transition: 0.5s;
+}
+
+section {
+  border: 1px solid black;
+  width: 50%;
+  margin: auto;
+}
+
+.tbPreco {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tbPreco tr {
+  padding: 8px;
+  border: 1px solid darkblue;
+}
+
+.tbPreco th {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.divNotas {
+  overflow-x: auto;
+}
+
+.tbNotas {
+  font-family: arial;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.tbNotas td,
+th {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.tbNotas tr:nth-child(even) {
+  background-color: gray;
+}
+
+.tbNotas tr:hover :not(th) {
+  background-color: lightblue;
+}
+
+.tbNotas th {
+  padding: 12px 5px;
+  background-color: blue;
+  color: white;
+}
+
+.galeria {
+  padding-top: 20px;
+  width: 90%;
+  margin: auto;
+  float: left;
+}
+
+.galeria img {
+  display: block;
+  width: 400px;
+  height: auto;
+  border-radius: 8%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img_um {
+  float: left;
+}
+.img_dois {
+  float: left;
+  padding-left: 10px;
+}
+
+.img_tres {
+  float: left;
+  padding-left: 10px;
+}
+
+.img_quatro {
+  float: left;
+  padding-left: 10px;
+}
+
+.galeria img:hover {
+  border-radius: 20%;
+  opacity: 0.5;
+}
