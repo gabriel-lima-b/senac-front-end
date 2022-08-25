@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>UC12-Formulário</title>
+    <meta name="description" content="UC12- Aula 11" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+    <meta name="author" content="Prof. Jair Ferraz" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+      <h1>Usando Formulário</h1>
+    </header>
+    <!--  -->
+    <form action="" method="" name="">
+      <label for="nome">Nome: </label>
+      <input id="nome" type="text" name="nome" />
+      <br /><br />
+      <label for="endereco">Endereço: </label>
+      <input
+        type="text"
+        id="endereco"
+        name="endereco"
+        maxlength="60"
+        placeholder="Endereço completo aqui..."
+      />
+      <br /><br />
+      <label for="idade">Idade: </label>
+      <input type="number" step="1" id="idade" min="18" name="idade" />
+      <br /><br />
+      <label for="email">E-mail: </label>
+      <input type="email" name="email" id="email" />
+      <br /><br />
+      <label for="dtNasc">Data Nasc.: </label>
+      <input type="date" name="dtNasc" id="dtNasc" min="2000-01-01" />
+      <br /><br />
+      <label for="senha">Senha: </label>
+      <input type="password" id="senha" name="senha" />
+      <br /><br />
+      <input type="reset" value="Limpar" />
+      <input type="submit" value="Enviar" />
+    </form>
+    <br /><br />
+    <hr />
+    <h2>Radio Button</h2>
+    <form>
+      <label for="nome2">Nome: </label>
+      <input id="nome2" name="nome2" type="text" required />
+      <fieldset>
+        <legend>Qual turno vc estuda?</legend>
+        <input type="radio" id="manha" name="turno" value="Manhã" />
+        <label for="manha">Manhã</label>
+        <br />
+        <input type="radio" id="tarde" name="turno" value="Tarde" />
+        <label for="tarde">Tarde</label>
+        <br />
+        <input type="radio" id="noite" name="turno" value="Noite" />
+        <label for="noite">Noite</label>
+      </fieldset>
+      <br /><br />
+      <input type="reset" value="Limpar" />
+      <input type="submit" value="Enviar" />
+    </form>
+    <br /><br />
+    <hr />
+    <h2>Radio Check</h2>
+    <form>
+      <label for="nome3">Nome: </label>
+      <input id="nome3" name="nome3" type="text" />
+      <fieldset>
+        <legend>Meios de transporte que usa?</legend>
+        <input type="checkbox" id="bike" name="bike" value="Bike" />
+        <label for="bike">Bike</label>
+        <br />
+        <input type="checkbox" id="carro" name="carro" value="Carro" />
+        <label for="carro">Carro</label>
+        <br />
+        <input type="checkbox" id="bus" name="bus" value="Bus" />
+        <label for="bus">Bus</label>
+        <br />
+        <input type="checkbox" id="app" name="app" value="App" />
+        <label for="app">Uber|99|Cabify|etc...</label>
+        <br />
+      </fieldset>
+      <br /><br />
+      <input type="reset" value="Limpar" />
+      <input type="submit" value="Enviar" />
+    </form>
+    <br /><br />
+    <hr />
+    <h2>Textarea</h2>
+    <form>
+      <label for="msg">Reclamação (300 caracteres)</label>
+      <br />
+      <textarea
+        id="msg"
+        name="msg"
+        rows="10"
+        cols="30"
+        maxlength="300"
+      ></textarea>
+      <br /><br />
+      <input type="reset" value="Limpar" />
+      <input type="submit" value="Enviar" />
+    </form>
+    <br /><br />
+    <hr />
+    <h2>Seleção/Combo-box/DataList</h2>
+    <form>
+      <label for="lanche">Escolha seu lanche:</label>
+      <select name="lanche" id="lanche">
+        <option value="">Selecione...</option>
+        <option value="xis">Xis</option>
+        <option value="pastel">Pastel</option>
+        <option value="burger">Burger</option>
+        <option value="dog">Cachorro-quente</option>
+      </select>
+      <br />
+      <label for="restAlimentar">Restrição Alimentar?</label
+      ><input list="restAlimentar" name="restAlimentar" />
+      <datalist id="restAlimentar">
+        <option value="Intolerância Lactose" />
+        <option value="Glutem" />
+        <option value="Ovo" />
+        <option value="Camarão" />
+        <option value="Amendoim" />
+      </datalist>
+      <br /><br />
+      <input type="reset" value="Limpar" />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

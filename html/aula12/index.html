@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UC12-Formulário de Contato</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Formulário de Contato</h1>
+    </header>
+    <div class="container">
+      <form>
+        <div class="row">
+          <div class="col_1">
+            <label for="nome">Nome</label>
+          </div>
+          <div class="col_2">
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Nome aqui..."
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col_1">
+            <label for="email">E-mail</label>
+          </div>
+          <div class="col_2">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="E-mail aqui..."
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col_1">
+            <label for="cidade">Cidade</label>
+          </div>
+          <div class="col_2">
+            <select name="cidade" id="cidade">
+              <option value="">Selecione...</option>
+              <option value="POA">Porto Alegre</option>
+              <option value="GRV">Gravataí</option>
+              <option value="CAC">Cachoeirinha</option>
+              <option value="CAN">Canoas</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col_1">
+            <label for="msg">Deixe sua opinião</label>
+          </div>
+          <div class="col_2">
+            <textarea
+              name="msg"
+              id="msg"
+              placeholder="Sua opinião aqui..."
+            ></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="reset" value="Limpar" />
+          <input type="submit" value="Enviar" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
