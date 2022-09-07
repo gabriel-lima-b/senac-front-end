@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>UC12-JavaScript</title>
+    <meta name="description" content="UC12- Aula 15" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+    <meta name="author" content="Prof. Jair Ferraz" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="./script.js"></script>
+  </head>
+  <!--<body onload="minhaFuncao()">-->
+  <body onload="minhaFuncaoExterna()">
+    <h1>Olá mundo!</h1>
+
+    <button onclick="minhaFuncao()">Alert...</button>
+    |
+    <button onclick="abreTerra()">Abre Terra</button>
+    |
+    <button onclick="fechaTerra()">Fecha Terra</button>
+
+    <br />
+
+    Digite seu nome - onchange:
+    <input
+      type="text"
+      name="nome"
+      placeholder="Nome aqui..."
+      onchange="nomeAqui(this.value)"
+    />
+
+    <br /><br />
+    Quando formulário é enviado - onsubmit
+    <form action="" method="post" onsubmit="enviaForm()">
+      <input type="text" name="nome" placeholder="Nome aqui..." />
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <br /><br />
+    Digite seu nome ao perder o foco ... - onblur:
+    <input
+      type="text"
+      name="nome"
+      id="nomeBlur"
+      placeholder="Nome aqui..."
+      onblur="nomeBlur()"
+    />
+
+    <br /><br />
+    Digite seu nome - Focus:
+    <input
+      type="text"
+      id="nomeFocus"
+      onfocus="nomeOnFocus(this)"
+      onblur="nomeOnBlur()"
+    />
+    <p>
+      Quando receber foco deve ter um comportamento diferente de quando perder o
+      foco.
+    </p>
+
+    <br /><br />
+    Digite algo - OnKeyPress:
+    <input type="text" id="textKeyPress" onkeypress="textKeyPress()" />
+    <p>Quando uma tecla for precionada faz algo.</p>
+
+    <br /><br />
+    Digite algo - OnKeyUp:
+    <input type="text" id="textKeyUp" onkeyup="textKeyUp()" />
+    <p>Quando solto uma tecla faz algo.</p>
+
+    <br /><br />
+    <p id="pOn" onclick="pOnClick()" onmouseout="pMouseOut()">
+      Muda cor do paragrado quando clicado ou quando passa o mouse.
+    </p>
+
+    <br /><br />
+    <p ondblclick="duploClick()">
+      De um dupplo click <b>aqui</b> para ver o texto abaixo.
+    </p>
+    <p id="texto"></p>
+
+    <br /><br />
+    <div
+      onmousemove="mostraCoord(event)"
+      onmouseout="limpaCoord()"
+      style="width: 200px; height: 100px; border: 1px solid red"
+    ></div>
+    <p>Ao passar o mouse mostrará a coordenada do ponteiro.</p>
+    <p>Quando o mouse sair de cima da div sera limpa a coordenada.</p>
+    <p id="coord"></p>
+
+    <script>
+      function minhaFuncao() {
+        alert("A página esta carregada!");
+      }
+
+      function abreTerra() {
+        janelaTerra = window.open(
+          "https://terra.com.br",
+          "",
+          "width=500, height=300"
+        );
+      }
+
+      function fechaTerra() {
+        janelaTerra.close();
+      }
+
+      function nomeAqui(nome) {
+        if (nome == "") {
+          alert("Nome precisa ser informado!");
+        } else {
+          alert("Nome informado: " + nome);
+        }
+      }
+
+      function enviaForm() {
+        alert("Form. envaido com sucesso!");
+      }
+
+      function nomeBlur() {
+        nome = document.getElementById("nomeBlur");
+        nome.value = nome.value.toUpperCase();
+      }
+
+      function nomeOnFocus(nome) {
+        nome.style.background = "yellow";
+      }
+
+      function nomeOnBlur() {
+        nomeBlur = document.getElementById("nomeFocus");
+        nomeBlur.style.background = "white";
+      }
+
+      function textKeyPress() {
+        text = document.getElementById("textKeyPress");
+        text.value = text.value.toUpperCase();
+      }
+
+      function textKeyUp() {
+        text = document.getElementById("textKeyUp");
+        text.value = text.value.toUpperCase();
+      }
+
+      function pOnClick() {
+        document.getElementById("pOn").style.color = "darkblue";
+      }
+
+      function pMouseOut() {
+        document.getElementById("pOn").style.color = "orange";
+      }
+
+      function duploClick() {
+        if (document.getElementById("texto").innerHTML === "") {
+          document.getElementById("texto").innerHTML = "Olá mundo!";
+        } else {
+          document.getElementById("texto").innerHTML = "";
+        }
+      }
+
+      function mostraCoord(event) {
+        x = event.clientX;
+        y = event.clientY;
+        coordenada = `Coordenadas do ponteiro: (X:${x}, Y:${y})`;
+        document.getElementById("coord").innerHTML = coordenada;
+      }
+
+      function limpaCoord() {
+        document.getElementById("coord").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
