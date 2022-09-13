@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro de Usuário</h1>
+    </header>
+    <div class="container">
+      <form method="post" name="formUser">
+        <p>
+          Nome Completo:
+          <input type="text" name="nome" id="nome" maxlength="40" size="40" />
+        </p>
+
+        <input type="radio" id="tipo1" name="tipo" value="cpf" />
+        <label for="tipo">CPF</label><br />
+        <input type="radio" id="tipo2" name="tipo" value="cnpj" />
+        <label for="tipo2">CNPJ</label><br />
+
+        <p>
+          CPF:
+          <input
+            type="text"
+            id="cpf"
+            name="cpf"
+            oninput="formataCPF(this)"
+            placeholder="Somente números"
+          />
+        </p>
+
+        <p>
+          CNPJ:
+          <input
+            type="text"
+            name="cnpj"
+            id="cnpj"
+            oninput="mascaraCNPJ(this)"
+            placeholder="Somente números"
+          />
+        </p>
+
+        <p>
+          Estado Civil
+          <select name="estado-civil" id="estado-civil">
+            <option value="">Selecione...</option>
+            <option value="solteiro">Solteiro</option>
+            <option value="Casado">Casado</option>
+            <option value="Separado">Separado</option>
+            <option value="Divorciado">Divorciado</option>
+            <option value="Viúvo">Viúvo</option>
+          </select>
+        </p>
+
+        <p>
+          Sexo:
+          <input type="radio" id="sexo1" name="sexo" value="masculino" />
+          <label for="tipo">Masculino</label><br />
+          <input type="radio" id="sexo2" name="sexo" value="feminino" />
+          <label for="tipo2">Feminino</label><br />
+        </p>
+
+        <p>
+          E-mail:
+          <input type="text" name="email" id="email" maxlength="40" size="40" />
+        </p>
+
+        <p>
+          Telefone:
+          <input
+            type="text"
+            name="telefone"
+            id="telefone"
+            oninput="mascaraTelefone(this)"
+            placeholder="DDD e Somente números"
+          />
+        </p>
+
+        <p>
+          Endereço:
+          <input
+            type="text"
+            name="endereco"
+            id="endereco"
+            maxlength="40"
+            size="40"
+          />
+        </p>
+
+        <p>
+          Informe a senha:
+
+          <input type="password" name="senha" id="senha" /><br />
+          Confirme a senha:
+          <input
+            type="password"
+            name="senhaR"
+            id="senhaR"
+            oninput="confirmaSenha(this)"
+            onblur="confirmaSenha(this)"
+          />
+        </p>
+
+        <input type="submit" value="Enviar" onclick="return validaForm()" />
+        <input type="reset" value="Limpa Form." />
+      </form>
+    </div>
+  </body>
+</html>

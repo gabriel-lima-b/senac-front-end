@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 16 - Valida Form JS </title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form method="post" name="formUser">
+        <fieldset>
+            <legend>Cadastro de Usuário</legend>
+            <p>Imagem do Usuário: <input id="imgUser" type="file" name="imgUser"></p>
+            <div id="imgExibir">
+                <img src="" id="preview">
+            </div>
+            
+            <p>Nome Completo: <input type="text" name="nome" id="nome" maxlength="40" size="40"></p>
+            
+            <p>E-mail: <input type="text" name="email" id="email" maxlength="40" size="40"></p>
+
+            <p>Telefone: <input type="text" name="telefone" id="telefone" oninput="mascaraTelefone(this)" placeholder="DDD e Somente números"></p>
+
+            <p>Endereço: <input type="text" name="endereco" id="endereco" maxlength="40" size="40"></p>
+
+            <p>CPF: <input type="text" id="cpf" name="cpf" oninput="formataCPF(this)" placeholder="Somente números"></p>
+
+            <p>CNPJ: <input type="text" name="cnpj" id="cnpj" oninput="mascaraCNPJ(this)" placeholder="Somente números"></p>
+
+            <p>Informe a senha: <input type="password" name="senha" id="senha"><br/>
+            Confirme a senha: <input type="password" name="senhaR" id="senhaR" oninput="confirmaSenha(this)" onblur="confirmaSenha(this)"></p>
+
+            <input type="submit" value="Enviar" onclick="return validaForm()">
+            <input type="reset" value="Limpa Form.">
+
+        </fieldset>
+    </form>
+
+    <hr>
+    <p id="lanche"></p>
+    <h5>Selecione o seu lanche:</h5>
+    <select id="selecionaLanche" onchange="lancheSelecionado()">
+        <option value="">Selecione...</option>
+        <option value="Pastel">Pastel</option>
+        <option value="Xis">Xis</option>
+    </select>
+
+    <script>
+        document.getElementById("imgUser").addEventListener("change", lerImg, false);
+    </script>
+</body>
+
+</html>
