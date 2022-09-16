@@ -1,54 +1,67 @@
+document.getElementById("tipo1").checked = true;
+handleRadioClick();
+sexo = "";
+tipo = "Pessoa Física";
 function validaForm() {
-  nome = formUser.nome.value;
-  email = formUser.email.value;
-  telefone = formUser.telefone.value;
-  endereco = formUser.endereco.value;
-  cpf = formUser.cpf.value;
-  cnpj = formUser.cnpj.value;
-  documento = formUser.documento.value;
-  senha = formUser.senha.value;
-  senhaR = formUser.senhaR.value;
-  tipo = formUser.nome.value;
-  estadoCivil = formUser.nome.value;
-  sexo = formUser.nome.value;
+  nomeString = formUser.nome.value;
+  emailString = formUser.email.value;
+  telefoneString = formUser.telefone.value;
+  enderecoString = formUser.endereco.value;
+  cpfString = formUser.cpf.value;
+  cnpjString = formUser.cnpji.value;
+  senhaString = formUser.senha.value;
+  senhaRString = formUser.senhaR.value;
+  estadoCivilString = formUser.estadoCivil.value;
 
-  if (nome == "" || nome.length <= 5) {
+  if (nomeString == "" || nomeString.length <= 5) {
     alert("Informe o nome completo!");
     formUser.nome.focus();
     return false;
   }
 
-  if (email == "" || !email.includes("@") || email.length <= 5) {
+  if (
+    emailString == "" ||
+    !emailString.includes("@") ||
+    emailString.length <= 5
+  ) {
     alert("Informe email corretamente!");
     formUser.email.focus();
     return false;
   }
   //(51) 3344-3344 || (51) 99988-8899
-  if (telefone == "" || telefone.length <= 10) {
+  if (telefoneString == "" || telefoneString.length <= 10) {
     alert("Telefone incorreto!");
     formUser.telefone.focus();
     return false;
   }
   //823.951.290-97
-  if ((cpf = "" || cpf.length != 14)) {
+  if ((cpfString == "" || cpfString.length != 14) && tipo == "Pessoa Física") {
     alert("CPF inválido!");
     formUser.cpf.focus();
     return false;
   }
   //53.592.717/0001-36
-  if (cnpj == "" || cnpj.length != 18) {
+  if (
+    (cnpjString == "" || cnpjString.length != 18) &&
+    tipo != "Pessoa Física"
+  ) {
     alert("CNPJ inválido!");
-    formUser.cnpj.focus();
+    formUser.cnpji.focus();
     return false;
   }
 
-  if (endereco == "" || endereco.length <= 5) {
+  if (enderecoString == "" || enderecoString.length <= 5) {
     alert("Endereço incompleto!");
     formUser.endereco.focus();
     return false;
   }
 
-  if (senha == "" || senhaR == "" || senha.length < 8 || senhaR.length < 8) {
+  if (
+    senhaString == "" ||
+    senhaRString == "" ||
+    senhaString.length < 8 ||
+    senhaRString.length < 8
+  ) {
     alert(
       "Senha inválida!\nA senha não atende os requisitos:\nmínimo 8 caracteres"
     );
@@ -56,10 +69,36 @@ function validaForm() {
     return false;
   }
 
-  if (senha != senhaR) {
+  if (senhaString != senhaRString) {
     alert("Senha inválida!");
     formUser.senha.focus();
     return false;
+  }
+
+  if (tipo == "Pessoa Física") {
+    alert(
+      `Tipo: ${tipo}\n
+    Nome: ${nomeString}\n
+    CPF: ${cpfString}\n
+    Sexo: ${sexo}\n
+    Estado Civil: ${estadoCivilString}\n
+    Email: ${emailString}\n
+    Telefone: ${telefoneString}\n
+    Endereço: ${enderecoString}\n
+    Senha: ${senhaString}\n
+    `
+    );
+  } else {
+    alert(
+      `Tipo: ${tipo}\n
+    Nome: ${nomeString}\n
+    CNPJ: ${cnpjString}\n
+    Email: ${emailString}\n
+    Telefone: ${telefoneString}\n
+    Endereço: ${enderecoString}\n
+    Senha: ${senhaString}\n
+    `
+    );
   }
 }
 
@@ -69,7 +108,7 @@ function confirmaSenha(s) {
   if (senha.value === senhaR.value) {
     senhaR.style.border = "1px solid gray";
   } else {
-    senhaR.style.border = "5px solid red";
+    senhaR.style.border = "1px solid red";
   }
 }
 
@@ -93,7 +132,7 @@ function mascaraTelefone(fone) {
     return;
   }
   //limitar quantia de caracteres
-  fone.setAttribute("maxlength", "13");
+  fone.setAttribute("maxlength", "14");
   //formatar
   if (tel.length == 1) fone.value = "(" + fone.value;
   if (tel.length == 3) fone.value += ")";
@@ -129,3 +168,30 @@ function lancheSelecionado() {
     document.getElementById("lanche").innerHTML = "";
   }
 }
+
+function handleRadioClick(e) {
+  if (e) {
+    tipo = e.target.value;
+  }
+  if (document.getElementById("tipo1").checked) {
+    divCPF.style.display = "block";
+    cnpj.style.display = "none";
+  } else {
+    divCPF.style.display = "none";
+    cnpj.style.display = "block";
+  }
+}
+
+const radioButtons = document.querySelectorAll('input[name="tipo"]');
+radioButtons.forEach((radio) => {
+  radio.addEventListener("change", handleRadioClick);
+});
+
+function handleRadioSexoClick(e) {
+  sexo = e.target.value;
+}
+
+const radioButtonsSexo = document.querySelectorAll('input[name="sexo"]');
+radioButtonsSexo.forEach((radio) => {
+  radio.addEventListener("change", handleRadioSexoClick);
+});
