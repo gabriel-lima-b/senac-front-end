@@ -10,13 +10,30 @@
       content="Projeto web para pratica do html, css e javascript com uso do mario."
     />
     <meta name="author" content="Gabriel Lima Brito da Silva" />
+    <link
+      rel="shortcut icon"
+      href="./imagens/favicon.ico"
+      type="image/x-icon"
+    />
     <title>Super Mario Jumper</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <div class="game-board">
+      <h1 id="pontuacao" class="pontuacao">0</h1>
+      <img src="./imagens/clouds.png" alt="nuvens" class="clouds" />
       <img src="./imagens/mario.gif" alt="mario" class="mario" />
+      <img src="./imagens/pipe.png" alt="cano verde" class="pipe" />
+
+      <button
+        id="recomecar"
+        class="recomecar"
+        onclick="window.location.reload();"
+        hidden
+      >
+        Recomeçar?
+      </button>
     </div>
   </body>
 </html>
