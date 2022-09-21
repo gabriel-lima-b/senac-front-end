@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -95,4 +96,12 @@
 
 .recomecar:hover {
   background-color: rgb(66, 167, 66);
+}
+
+.pontuacao {
+  text-align: center;
+  -webkit-text-stroke: 0.5px black; /* width and color */
+  font-size: 5rem;
+  font-family: "Changa", sans-serif;
+  color: white;
 }

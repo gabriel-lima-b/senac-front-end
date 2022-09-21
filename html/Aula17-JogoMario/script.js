@@ -1,5 +1,7 @@
 const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
+let score = 0;
+let pipePositionScore = pipe.OffsetLeft;
 
 const jump = (event) => {
   console.log(event);
@@ -36,19 +38,9 @@ const loop = setInterval(() => {
     recomecar.removeAttribute("hidden");
 
     clearInterval(loop);
+  } else if (pipePosition > pipePositionScore) {
+    score += 10;
+    document.getElementById("pontuacao").innerHTML = score;
   }
-}, 10);
-
-let pontuacao = 0;
-
-function addPontos() {
-  pontuacao += 5;
-  document.getElementById("pontuacao").innerHTML = pontuacao;
-}
-
-const loop2 = setInterval(() => {
-  const pipePosition = pipe.offsetLeft;
-  if (pipePosition < 10 && pipePosition > 0) {
-    addPontos();
-  }
+  pipePositionScore = pipePosition;
 }, 10);
