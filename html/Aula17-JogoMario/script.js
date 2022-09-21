@@ -8,7 +8,8 @@ const jump = (event) => {
   if (
     event.key === "ArrowUp" ||
     event.key === "ArrowDown" ||
-    event.key === " "
+    event.key === " " ||
+    event.type === "click"
   ) {
     mario.classList.add("jump");
     setTimeout(() => {
@@ -18,6 +19,7 @@ const jump = (event) => {
 };
 
 document.addEventListener("keydown", jump);
+document.addEventListener("click", jump);
 
 const loop = setInterval(() => {
   const pipePosition = pipe.offsetLeft;
