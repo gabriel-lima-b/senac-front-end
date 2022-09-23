@@ -21,10 +21,11 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <audio src="./sounds/title.mp3" id="titleAudio" loop="loop"></audio>
     <div class="game-board">
       <h1 id="pontuacao" class="pontuacao">0</h1>
-      <img src="./imagens/clouds.png" alt="nuvens" class="clouds" />
-      <img src="./imagens/mario.gif" alt="mario" class="mario" />
+      <img src="./imagens/clouds.png" alt="nuvens" class="clouds" id="clouds" />
+      <img src="./imagens/marioStart.png" alt="mario" class="mario" />
       <img src="./imagens/pipe.png" alt="cano verde" class="pipe" />
 
       <button
@@ -33,8 +34,9 @@
         onclick="window.location.reload();"
         hidden
       >
-        Recomeçar?
+        TRY AGAIN?
       </button>
+      <button id="comecar" class="comecar" onclick="comecar();">START</button>
     </div>
   </body>
 </html>

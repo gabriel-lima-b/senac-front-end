@@ -50,7 +50,8 @@
   bottom: 0;
   width: 80px;
   right: 40px;
-  animation: pipe-animation 1.3s infinite linear;
+  animation: pipe-animation 1.4s infinite linear;
+  animation-play-state: paused;
 }
 
 @keyframes pipe-animation {
@@ -66,6 +67,7 @@
   width: 550px;
   position: absolute;
   animation: clouds-animation 70s infinite linear;
+  animation-play-state: paused;
 }
 
 @keyframes clouds-animation {
@@ -78,6 +80,23 @@
 }
 
 .recomecar {
+  width: 180px;
+  padding: 10px;
+  background-color: rgb(35, 160, 35);
+  font-size: x-large;
+  color: #fff;
+  border: 0;
+  border-radius: 20px;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.comecar {
   width: 180px;
   padding: 10px;
   background-color: rgb(35, 160, 35);
