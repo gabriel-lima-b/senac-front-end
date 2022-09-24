@@ -1,0 +1,23 @@
+body {
+  background-color: lightgray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  background-image: linear-gradient(lightblue, blue);
+}
+.img-div {
+  background-color: tomato;
+}
+
+.texto {
+  background-color: aqua;
+}
+
+.vertical-nav {
+  background-color: #92a8d1;
+}
+
+footer {
+  background: linear-gradient(to top right, rgb(255, 166, 0), rgb(132, 0, 255));
+}
